@@ -14,6 +14,18 @@ header{
 	background-attachment: fixed;
 	background-blend-mode: multiply;
 }
+@media screen and (max-width:600px){
+	header{
+		background: url("../images/background_small.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0 10%;
+		background-attachment: fixed;
+		height: 450px;
+	}
+}
+
+/*=============================================================================*/
 .welcome{
 	position: relative;
 	width: 100%;
@@ -140,7 +152,6 @@ h1.menuTag{
 	position: relative;
 	width: 300px;
 	height: 400px;
-	overflow: hidden;
 	cursor: pointer;
 	border-top-right-radius: 25px;
 	border-bottom-left-radius: 25px;
@@ -222,8 +233,7 @@ h1.menuTag{
 .review .container{
 	position: relative;
 	width: 600px;
-	height: 200px;
-	overflow: hidden;
+	min-height: 200px;
 	text-align: center;
 }
 .review .container h1{
@@ -256,6 +266,17 @@ h1.menuTag{
 .review .controller span.active{
 	background: #000;
 }
+@media screen and (max-width:900px){
+	.review .container{
+		position: relative;
+		width: 80%;
+		min-height: 310px;
+	}
+	#main > div.review > div.container > h1{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
 
 /*==========================================================================================*/
 .contact{
@@ -265,13 +286,18 @@ h1.menuTag{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding:  0 10%;
+	flex-wrap: wrap;
+	padding:  50px 10% 0;
+}
+@media screen and (max-width: 400px){
+	.contact{
+		padding: 0 25px;
+	}
 }
 .contact > div{
 	position: relative;
 	width: 350px;
 	height: 250px;
-	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -280,6 +306,7 @@ h1.menuTag{
 	border: 1px solid #0004;
 	z-index: 5;
 	cursor: pointer;
+	margin: 15px 0;
 }
 .contact > div.active{
 	color: #fff;
@@ -322,6 +349,7 @@ h1.menuTag{
 	background: #000;
 	z-index: 1;
 	transition: 0.5s;
+	margin: 0;
 }
 .contact .follow .input{
 	position: relative;

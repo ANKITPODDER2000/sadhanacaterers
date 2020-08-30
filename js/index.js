@@ -3,11 +3,11 @@ let marker1 = document.querySelector("#main > div.contact > div.marker");
 let initContact = document.querySelector('#main > div.contact > div.con');
 const review = {
 	"user0" : [
-		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit,.",
 		"~Ankit Podder"
 	],
 	"user1" : [
-		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod .",
 		"~Riddhi Sen"
 	],
 	"user2" : [
@@ -15,11 +15,11 @@ const review = {
 		"~Anil Sen"
 	],
 	"user3" : [
-		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 		"~Riju Das"
 	],
 	"user4" : [
-		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.",
 		"~Isheeta Sen"
 	]
 }
