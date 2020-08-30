@@ -28,6 +28,7 @@ header{
 	transform: translateY(-100px);
 	background: #fff;
 }
+
 .welcome .block::before{
 	position: absolute;
 	top: 50%;
@@ -64,7 +65,41 @@ header{
 	display: block;
 	margin: 30px auto 0 auto;
 }
-
+@media screen and (max-width: 840px){
+	.welcome .block{
+		width: 90%;
+	}
+}
+@media screen and (max-width: 840px){
+	.welcome .block{
+		height: 400px;
+	}
+	#main > div.welcome > div > div > h1{
+		font-size: 18px;
+	}
+	#main > div.welcome > div > div > p{
+		font-size: 15px;
+		width: 90%;
+		margin-top: 15px;
+	}
+}
+@media screen and (max-width: 420px){
+	.welcome .block .content h1{
+		margin: 0;
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 370px){
+	.welcome .block{
+		height: 430px;
+	}
+	#main > div.welcome > div > div > h1{
+		font-size: 16px;
+	}
+	#main > div.welcome > div > div > p{
+		font-size: 14px;
+	}
+}
 /*======================================================================================================*/
 .menu{
 	position: relative;
@@ -73,6 +108,7 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: -80px;
 }
 .menu .container{
 	position: relative;

@@ -13,7 +13,7 @@ nav{
 	left: 0;
 	z-index: 10;
 	padding:  0 80px;
-	transition: 0.5s;
+	transition: 0.7s;
 }
 nav.active{
 	height: 55px;
@@ -66,3 +66,126 @@ nav.active ul:nth-child(2) div.marker{
 	height: 4px;
 }
 
+/*responsive*/
+@media screen and (max-width: 1040px){
+	body > nav > ul:nth-child(2){
+		position: fixed;
+		height: 100vh;
+		top: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		width: 270px;
+		background: #fff;
+		justify-content: center;
+		align-items: flex-start;
+		padding-left: 30px;
+		background: #14328a;
+		transform: translateX(270px);
+		transition: 0.7s;
+	}
+	body > nav > ul:nth-child(2) > div{
+		display: none;
+	}
+	body > nav > ul:nth-child(2) li{
+		position: relative;
+		padding: 0;
+		height: auto;
+		width: auto;
+		text-align: left;
+		margin: 15px 0;
+		padding-bottom: 10px;
+		padding-right: 10px;
+		cursor: pointer;
+	}
+	body > nav > ul:nth-child(2) li a{
+		display: block;
+		position: relative;
+		height: 100%;
+		width:  100%;
+		color: #fff;
+	}
+	body > nav > ul:nth-child(2) li::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
+		background: #fff;
+		transform: scaleX(0);
+		transition: 0.5s;
+		transform-origin: left;
+	}
+	body > nav > ul:nth-child(2) li:hover::before{
+		transform: scaleX(1);
+	}
+	body > nav > ul:nth-child(2) li.active::before{
+		transform: scaleX(1);
+	}
+	body > nav > div.handburger{
+	    position: absolute;
+	    right: 50px;
+	    top: calc(46px / 2);
+	    width: 35px;
+	    height: 24px;
+	    margin-left: 40px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: flex-end;
+	    flex-direction: column;
+	    cursor: pointer;
+	    transition: 0.5s;
+	}
+	body > nav.active > div.handburger{
+		top: calc(31px / 2);
+	}
+	body > nav > div.handburger span{
+		display: block;
+	    width: 100%;
+	    position: relative;
+	    height: 2px !important;
+	    background: #000;
+	    margin: 3px 0;
+	    transition: 0.8s;
+	}
+	body > nav > div.handburger span:nth-child(2){
+		width: calc(100% * 0.7);
+	}
+	body > nav > div.handburger span:nth-child(3){
+		width: calc(100% * 0.4);
+	}
+	body > nav > div.handburger:hover span{
+		width: 100%;
+	}
+	body > nav > div.handburger.active span{
+		width: 100%;
+	}
+	body > nav > div.handburger.active span:nth-child(1){
+		transform: translateY(7.5px) rotateZ(45deg);
+	}
+	body > nav > div.handburger.active span:nth-child(2){
+		transform: translateX(-20px);
+    	opacity: 0;
+	}
+	body > nav > div.handburger.active span:nth-child(3){
+		transform: translateY(-7.5px) rotateZ(-45deg);
+	}
+	nav.activeSlide{
+		transform: translateX(-270px);
+	}
+	#main{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transition: 0.7s;
+	}
+	#main.active{
+		transform: translateX(-270px);
+	}
+}
+@media screen and (max-width: 470px){
+	nav{
+		padding: 0;
+	}
+}

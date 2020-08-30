@@ -6,156 +6,164 @@
 	<link rel="stylesheet" type="text/css" href="./css/nav.css">
 	<link rel="stylesheet" type="text/css" href="./icon/css/all.min.css">
 </head>
-<body onload="mouseover(document.querySelector('body > nav > ul:nth-child(2) > li:nth-child(2)')) ; right(); checkNav() ; checkContact(document.querySelector('body > div.contact > div.con'))" onscroll="checkNav()">
+<body onload="mouseover(document.querySelector('body > nav > ul:nth-child(2) > li:nth-child(2)')) ; right(); checkNav() ; checkContact(document.querySelector('#main > div.contact > div.con'))" >
 	<nav>
 		<ul>
 			<li><a href="">SADHANA CATERERS</a></li>
 		</ul>
 		<ul>
 			<div class="marker"></div>
-			<li onmouseover="mouseover(this)" onmouseout="mouseout(document.querySelector('body > nav > ul:nth-child(2) > li:nth-child(2)'))"><a href="">HOME</a></li>
+			<li onmouseover="mouseover(this)" onmouseout="mouseout(document.querySelector('body > nav > ul:nth-child(2) > li:nth-child(2)'))" class="active"><a href="">HOME</a></li>
 			<li onmouseover="mouseover(this)" onmouseout="mouseout(document.querySelector('body > nav > ul:nth-child(2) > li:nth-child(2)'))"><a href="">MENU</a></li>
 			<li onmouseover="mouseover(this)" onmouseout="mouseout(document.querySelector('body > nav > ul:nth-child(2) > li:nth-child(2)'))"><a href="">GALLERY</a></li>
 			<li onmouseover="mouseover(this)" onmouseout="mouseout(document.querySelector('body > nav > ul:nth-child(2) > li:nth-child(2)'))"><a href="">CONTACT</a></li>
 		</ul>
+		<div class="handburger" onclick="handburger(this)">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 	</nav>
 
-	<header></header>
-	<div class="welcome">
-		<div class="block">
-			<div class="content">
-				<h1>Welcome to our site!</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="menu">
-		<div class="container">
-			<div class="img">
 
-				<img src="./images/fish.jpg">
-				<span>
-					<svg id="svg1" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="1" y1="1" x2="51" y2="1" stroke="black" stroke-width="2"/>
-						<line x1="1.5" y1="51.5" x2="1.5" y2="1.5" stroke="black" stroke-width="2"/>
-					</svg>
-					<svg id="svg2" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="50" y1="51" y2="51" stroke="black" stroke-width="2"/>
-						<line x1="49.5" y1="0.5" x2="49.5" y2="50.5" stroke="black" stroke-width="2"/>
-					</svg>
-					<h1>FISH</h1>
-					<svg id="underline" width="59" height="12" viewBox="0 0 59 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="1.46967" y1="9.78315" x2="9.95495" y2="1.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="33.4697" y1="10.7831" x2="41.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="17.4697" y1="10.7831" x2="25.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="49.4697" y1="10.7831" x2="57.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="17.7834" y1="9.84381" x2="9.29811" y2="1.35853" stroke="black" stroke-width="1.5"/>
-						<line x1="49.7834" y1="10.8438" x2="41.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
-						<line x1="33.7834" y1="10.8438" x2="25.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
-					</svg>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor.</p>
-				</span>
-			</div>
-			<div class="img">
-				<img src="./images/mutton.jpg">
-				<span>
-					<svg id="svg1" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="1" y1="1" x2="51" y2="1" stroke="black" stroke-width="2"/>
-						<line x1="1.5" y1="51.5" x2="1.5" y2="1.5" stroke="black" stroke-width="2"/>
-					</svg>
-					<svg id="svg2" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="50" y1="51" y2="51" stroke="black" stroke-width="2"/>
-						<line x1="49.5" y1="0.5" x2="49.5" y2="50.5" stroke="black" stroke-width="2"/>
-					</svg>
-					<h1>MUTTON</h1>
-					<svg id="underline" width="59" height="12" viewBox="0 0 59 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="1.46967" y1="9.78315" x2="9.95495" y2="1.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="33.4697" y1="10.7831" x2="41.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="17.4697" y1="10.7831" x2="25.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="49.4697" y1="10.7831" x2="57.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="17.7834" y1="9.84381" x2="9.29811" y2="1.35853" stroke="black" stroke-width="1.5"/>
-						<line x1="49.7834" y1="10.8438" x2="41.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
-						<line x1="33.7834" y1="10.8438" x2="25.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
-					</svg>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor.</p>
-				</span>
-			</div>
-			<div class="img">
-				<img src="./images/salad.jpg">
-				<span>
-					<svg id="svg1" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="1" y1="1" x2="51" y2="1" stroke="black" stroke-width="2"/>
-						<line x1="1.5" y1="51.5" x2="1.5" y2="1.5" stroke="black" stroke-width="2"/>
-					</svg>
-					<svg id="svg2" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="50" y1="51" y2="51" stroke="black" stroke-width="2"/>
-						<line x1="49.5" y1="0.5" x2="49.5" y2="50.5" stroke="black" stroke-width="2"/>
-					</svg>
-					<h1>SALAD</h1>
-					<svg id="underline" width="59" height="12" viewBox="0 0 59 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="1.46967" y1="9.78315" x2="9.95495" y2="1.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="33.4697" y1="10.7831" x2="41.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="17.4697" y1="10.7831" x2="25.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="49.4697" y1="10.7831" x2="57.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
-						<line x1="17.7834" y1="9.84381" x2="9.29811" y2="1.35853" stroke="black" stroke-width="1.5"/>
-						<line x1="49.7834" y1="10.8438" x2="41.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
-						<line x1="33.7834" y1="10.8438" x2="25.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
-					</svg>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor.</p>
-				</span>
+	<div id="main">
+		<header></header>
+		<div class="welcome">
+			<div class="block">
+				<div class="content">
+					<h1>Welcome to our site!</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="review">
-		<div class="container">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-			<h1>~Ankit Podder</h1>
-		</div>
-		<div class="controller">
-			<span onclick="left()">
-				<p><i class="fas fa-arrow-left"></i></p>
-			</span>
-			<span onclick="right()">
-				<p><i class="fas fa-arrow-right"></i></p>
-			</span>
-		</div>
-	</div>
-	<div class="contact">
-		<div class="marker"></div>
-		<div class="con" onmouseover="checkContact(this)" onmouseout="checkContactOut()">
-			<h1>CONTACT</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt.</p>
-			<p><b>sadhanacaterers@gmail.com</b></p>
-		</div>
-		<div class="location" onmouseover="checkContact(this)" onmouseout="checkContactOut()">
-			<h1>LOCATION</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-			<a href="#">KNOW MORE</a>
-		</div>
-		<div class="follow" onmouseover="checkContact(this)" onmouseout="checkContactOut()">
-			<h1>FOLLOW US VIA EMAIL</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do..</p>
-			<div class="input">
-				<input type="email" name="">
-				<button>
-					<i class="fas fa-arrow-right"></i>
-				</button>
-			</div>
+		<div class="menu">
+			<div class="container">
+				<div class="img">
 
+					<img src="./images/fish.jpg">
+					<span>
+						<svg id="svg1" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="1" y1="1" x2="51" y2="1" stroke="black" stroke-width="2"/>
+							<line x1="1.5" y1="51.5" x2="1.5" y2="1.5" stroke="black" stroke-width="2"/>
+						</svg>
+						<svg id="svg2" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="50" y1="51" y2="51" stroke="black" stroke-width="2"/>
+							<line x1="49.5" y1="0.5" x2="49.5" y2="50.5" stroke="black" stroke-width="2"/>
+						</svg>
+						<h1>FISH</h1>
+						<svg id="underline" width="59" height="12" viewBox="0 0 59 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="1.46967" y1="9.78315" x2="9.95495" y2="1.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="33.4697" y1="10.7831" x2="41.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="17.4697" y1="10.7831" x2="25.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="49.4697" y1="10.7831" x2="57.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="17.7834" y1="9.84381" x2="9.29811" y2="1.35853" stroke="black" stroke-width="1.5"/>
+							<line x1="49.7834" y1="10.8438" x2="41.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
+							<line x1="33.7834" y1="10.8438" x2="25.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
+						</svg>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor.</p>
+					</span>
+				</div>
+				<div class="img">
+					<img src="./images/mutton.jpg">
+					<span>
+						<svg id="svg1" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="1" y1="1" x2="51" y2="1" stroke="black" stroke-width="2"/>
+							<line x1="1.5" y1="51.5" x2="1.5" y2="1.5" stroke="black" stroke-width="2"/>
+						</svg>
+						<svg id="svg2" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="50" y1="51" y2="51" stroke="black" stroke-width="2"/>
+							<line x1="49.5" y1="0.5" x2="49.5" y2="50.5" stroke="black" stroke-width="2"/>
+						</svg>
+						<h1>MUTTON</h1>
+						<svg id="underline" width="59" height="12" viewBox="0 0 59 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="1.46967" y1="9.78315" x2="9.95495" y2="1.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="33.4697" y1="10.7831" x2="41.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="17.4697" y1="10.7831" x2="25.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="49.4697" y1="10.7831" x2="57.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="17.7834" y1="9.84381" x2="9.29811" y2="1.35853" stroke="black" stroke-width="1.5"/>
+							<line x1="49.7834" y1="10.8438" x2="41.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
+							<line x1="33.7834" y1="10.8438" x2="25.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
+						</svg>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor.</p>
+					</span>
+				</div>
+				<div class="img">
+					<img src="./images/salad.jpg">
+					<span>
+						<svg id="svg1" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="1" y1="1" x2="51" y2="1" stroke="black" stroke-width="2"/>
+							<line x1="1.5" y1="51.5" x2="1.5" y2="1.5" stroke="black" stroke-width="2"/>
+						</svg>
+						<svg id="svg2" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="50" y1="51" y2="51" stroke="black" stroke-width="2"/>
+							<line x1="49.5" y1="0.5" x2="49.5" y2="50.5" stroke="black" stroke-width="2"/>
+						</svg>
+						<h1>SALAD</h1>
+						<svg id="underline" width="59" height="12" viewBox="0 0 59 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<line x1="1.46967" y1="9.78315" x2="9.95495" y2="1.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="33.4697" y1="10.7831" x2="41.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="17.4697" y1="10.7831" x2="25.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="49.4697" y1="10.7831" x2="57.955" y2="2.29787" stroke="black" stroke-width="1.5"/>
+							<line x1="17.7834" y1="9.84381" x2="9.29811" y2="1.35853" stroke="black" stroke-width="1.5"/>
+							<line x1="49.7834" y1="10.8438" x2="41.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
+							<line x1="33.7834" y1="10.8438" x2="25.2981" y2="2.35853" stroke="black" stroke-width="1.5"/>
+						</svg>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor.</p>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="review">
+			<div class="container">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+				<h1>~Ankit Podder</h1>
+			</div>
+			<div class="controller">
+				<span onclick="left()">
+					<p><i class="fas fa-arrow-left"></i></p>
+				</span>
+				<span onclick="right()">
+					<p><i class="fas fa-arrow-right"></i></p>
+				</span>
+			</div>
+		</div>
+		<div class="contact">
+			<div class="marker"></div>
+			<div class="con" onmouseover="checkContact(this)" onmouseout="checkContactOut()">
+				<h1>CONTACT</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt.</p>
+				<p><b>sadhanacaterers@gmail.com</b></p>
+			</div>
+			<div class="location" onmouseover="checkContact(this)" onmouseout="checkContactOut()">
+				<h1>LOCATION</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+				<a href="#">KNOW MORE</a>
+			</div>
+			<div class="follow" onmouseover="checkContact(this)" onmouseout="checkContactOut()">
+				<h1>FOLLOW US VIA EMAIL</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do..</p>
+				<div class="input">
+					<input type="email" name="">
+					<button>
+						<i class="fas fa-arrow-right"></i>
+					</button>
+				</div>
+
+			</div>
 		</div>
 	</div>
 

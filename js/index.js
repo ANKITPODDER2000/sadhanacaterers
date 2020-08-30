@@ -1,6 +1,6 @@
 let count = -1;
-let marker1 = document.querySelector("body > div.contact > div.marker");
-let initContact = document.querySelector('body > div.contact > div.con');
+let marker1 = document.querySelector("#main > div.contact > div.marker");
+let initContact = document.querySelector('#main > div.contact > div.con');
 const review = {
 	"user0" : [
 		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
@@ -26,25 +26,25 @@ const review = {
 
 const right = ()=>{
 	count++;
-	document.querySelector("body > div.review > div.container > p").innerHTML = review["user"+count][0];
-	document.querySelector("body > div.review > div.container > h1").innerHTML = review["user"+count][1];
+	document.querySelector("#main > div.review > div.container > p").innerHTML = review["user"+count][0];
+	document.querySelector("#main > div.review > div.container > h1").innerHTML = review["user"+count][1];
 	if(count==4)
-		document.querySelector("body > div.review > div.controller > span:nth-child(2) > p").style.opacity = "0.5";
-	document.querySelector("body > div.review > div.controller > span:nth-child(1) > p").style.opacity = "1"
+		document.querySelector("#main > div.review > div.controller > span:nth-child(2) > p").style.opacity = "0.5";
+	document.querySelector("#main > div.review > div.controller > span:nth-child(1) > p").style.opacity = "1"
 	if(count==0)
-	document.querySelector("body > div.review > div.controller > span:nth-child(1) > p").style.opacity = "0.5"
+	document.querySelector("#main > div.review > div.controller > span:nth-child(1) > p").style.opacity = "0.5"
 }
 const left = ()=>{
 	count--;
-	document.querySelector("body > div.review > div.container > p").innerHTML = review["user"+count][0];
-	document.querySelector("body > div.review > div.container > h1").innerHTML = review["user"+count][1];
-	document.querySelector("body > div.review > div.controller > span:nth-child(2) > p").style.opacity = "1";
+	document.querySelector("#main > div.review > div.container > p").innerHTML = review["user"+count][0];
+	document.querySelector("#main > div.review > div.container > h1").innerHTML = review["user"+count][1];
+	document.querySelector("#main > div.review > div.controller > span:nth-child(2) > p").style.opacity = "1";
 	if(count==0)
-		document.querySelector("body > div.review > div.controller > span:nth-child(1) > p").style.opacity = "0.5"
+		document.querySelector("#main > div.review > div.controller > span:nth-child(1) > p").style.opacity = "0.5"
 }
 
 const checkContact = e =>{
-	$("body > div.contact > div").removeClass("active");
+	$("#main > div.contact > div").removeClass("active");
 	marker1.style.width = e.offsetWidth + "px";
 	marker1.style.height = e.offsetHeight + "px";
 	marker1.style.top = e.offsetTop + "px";
