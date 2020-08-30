@@ -128,7 +128,19 @@ header{
 .menu .container .img:hover span{
 	opacity: 1;
 }
-
+#svg1{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+#svg2{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+#underline{
+	margin-top: 10px;
+}
 /*================================================================================================*/
 .review{
 	position: relative;
@@ -170,7 +182,123 @@ header{
 	font-size: 19px;
 	height: 20px;
 	width: 20px;
+	margin: 0 10px;
+}
+.review .controller span i{
+	transition: 0.5s;
 }
 .review .controller span.active{
 	background: #000;
+}
+
+/*==========================================================================================*/
+.contact{
+	position: relative;
+	min-height: 400px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding:  0 10%;
+}
+.contact > div{
+	position: relative;
+	width: 350px;
+	height: 250px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	border: 1px solid #0004;
+	z-index: 5;
+	cursor: pointer;
+}
+.contact > div.active{
+	color: #fff;
+}
+.contact > div h1{
+	font-size: 22px;
+	margin-bottom: 15px;
+	transition: 0.5s;
+}
+.contact > div p{
+	font-size: 16px;
+	position: relative;
+	width: 80%;
+	margin-bottom: 10px;
+	line-height: 22px;
+	transition: 0.5s;
+}
+.contact > div a{
+	color: #000;
+	text-decoration: none;
+	margin-top: 15px;
+	padding: 10px 15px;
+	border: 1px solid #000;
+	transition: 0.5s;
+}
+.contact > div.active a{
+	color: #fff;
+	border-color: #fff;
+}
+.contact > div a:hover{
+	background: #000;
+	color: #fff;
+}
+.contact > div.active a:hover{
+	background: #fff;
+	color: #000;
+}
+.contact .marker{
+	position: absolute;
+	background: #000;
+	z-index: 1;
+	transition: 0.5s;
+}
+.contact .follow .input{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 15px;
+	height: 25px;
+}
+.contact .follow .input input{
+	height: 25px;
+	width: 150px;
+	padding: 4px 10px;
+	border: none;
+	outline: none;
+	background: #0001;
+	color: #000;
+	transition: 0.5s;
+}
+.contact .follow .input button{
+	position: relative;
+	width: 40px;
+	height: 100%;
+	background: #0003;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	outline: none;
+	cursor: pointer;
+}
+.contact .follow .input button i{
+	transition: 0.5s;
+}
+.contact .follow.active .input input{
+	background: #fff2;
+	color: #fff;
+}
+.contact .follow.active .input button{
+	background: #fff5;
+}
+.contact .follow.active .input button i{
+	color: #fff;
 }
