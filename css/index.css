@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Dancing+Script:wght@500;600;700&family=Lobster&family=Poppins:ital,wght@0,300;0,600;0,800;1,200;1,500&display=swap');
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Alata', sans-serif;
+	font-family: 'Dancing Script', cursive;
+	font-family: 'Lobster', cursive;
+	font-family: 'Poppins', sans-serif;
 }
 header{
 	position: relative;
@@ -12,7 +17,6 @@ header{
 	background-size: cover;
 	background-position: 0 10%;
 	background-attachment: fixed;
-	background-blend-mode: multiply;
 }
 @media screen and (max-width:600px){
 	header{
@@ -396,5 +400,73 @@ h1.menuTag{
 	background: #fff5;
 }
 .contact .follow.active .input button i{
+	color: #fff;
+}
+/*==================================================================================*/
+.footer{
+	position: relative;
+	width: 100%;
+	min-height: 40vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	background: url("../images/footer.jpg") , linear-gradient(to right , #f00 , #000);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+}
+div.footer > div{
+	width: 300px;
+	min-height: 150px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+div.footer > div h1{
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+div.footer > div p{
+	font-size: 14px;
+	line-height: 21px;
+	word-spacing: 3px;
+}
+@media screen and (max-width:450px){
+	div.footer > div{
+		margin: 15px 0;
+	}
+}
+@media screen and (max-width:380px){
+	div.footer > div{
+		width: 260px;
+		margin: 15px 0;
+	}
+}
+/*========================================================================================*/
+footer{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background: #000;
+	color: #fff !important;
+	font-size: 16px;
+}
+footer > p{
+	margin-right: 10px;
+}
+footer > a{
+	position: relative;
+	margin: 0 5px;
+	display: block;
 	color: #fff;
 }
