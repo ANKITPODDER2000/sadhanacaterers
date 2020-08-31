@@ -1,116 +1,191 @@
 *{
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body,html{
-	position: relative;
-	width: 100%;
-	overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
 }
-.container{
-	position: relative;
-	width: 100%;
-	margin-top: 60px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 0;
+/*==================================Photo Gallery style==================================*/
+.header {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 10px;
+  font-weight: normal;
 }
-
-.container .menu{
-	position: relative;
-	width: 80%;
-	height: 60px;
-	display: block;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 40px;
+.header h1{
+  padding: 0 10px;
+  font-size: 60px;
+  position: relative;
+  display: inline-block;
+  background: -o-linear-gradient(45deg ,red,purple);
+  background: linear-gradient(45deg ,red,purple);
+  -webkit-background-clip : text;
+  -webkit-text-fill-color : transparent;
 }
-.container .menu ul{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
+.header h1::after{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: -o-linear-gradient(45deg ,red 30%,purple);
+  background: linear-gradient(45deg ,red 30%,purple);
 }
-.container .menu ul li{
-	list-style-type: none;
-	margin: 0 10px;
-	padding: 10px 20px;
-	border: 1px solid #ff05c3;
-	border-radius: 5px;
-	transition: .5s;
-	cursor: pointer;
-	z-index: 99999;
-	font-family: consolas;
+@media screen and (max-width: 600px){
+  .header h1{
+    font-size: 30px;
+  }
+  .header h1::after{
+    height: 5px;
+  }
 }
-
-.container .menu ul li.active,
-.container .menu ul li:hover{
-	background: #ff05c3;
-	color: #fff;
-}
-.container .menu-item{
-	position: relative;
-	min-height: 100vh;
-	width: 80%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	flex-direction: row;
-}
-.container .menu-item .item{
-	position: relative;
-	width: 20%;
-	height: 300px;
-	margin: 30px calc(20% / 8);
-}
-.container .menu-item .item img{
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-@media screen and (max-width: 1400px){
-	.container .menu-item .item{
-		width: 40%;
-		margin: 30px calc(20% / 4);
-	}
-}
-@media screen and (max-width: 1030px){
-	.container .menu-item .item{
-		width: 60%;
-		margin: 20px 20%;
-	}
-}
-@media screen and (max-width: 700px){
-	.container .menu-item .item{
-		width: 80%;
-		margin: 20px 10%;
-	}
-	.container .menu{
-		height: 300px;
-	}
-	.container .menu ul{
-		flex-direction: column;
-	}
-	.container .menu ul li{
-		width: 80%;
-		margin: 5px 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+.row {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 4px;
+  margin-bottom: 50px;
 }
 
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  -webkit-box-flex: 25%;
+          flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
 
-@media screen and (max-width: 400px){
-	.container .menu-item .item{
-		width: 100%;
-		margin: 20px 0%;
-	}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .column {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    -webkit-box-flex: 100%;
+            flex: 100%;
+    max-width: 100%;
+  }
+}
+/*Style For footer for Transition*/
+.footerIcon:hover{
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+/*==========================================================================*/
+.img-show{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999999999999;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.93);
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.img-show img{
+  max-width: 70%;
+  max-height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.img-show.active{
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.left{
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  cursor: pointer;
+}
+.left i,
+.right i{
+  font-size: 20px;
+}
+.right{
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  cursor: pointer;
+}
+.fa-times-circle{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.fa-times-circle:hover{
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }

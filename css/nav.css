@@ -74,7 +74,9 @@ nav ul:nth-child(2) div.marker{
 nav.active ul:nth-child(2) div.marker{
 	height: 4px;
 }
-
+li.contactid{
+	display: none;
+}
 /*responsive*/
 @media screen and (max-width: 1040px){
 	body > nav > ul:nth-child(2){
@@ -192,6 +194,18 @@ nav.active ul:nth-child(2) div.marker{
 	#main.active{
 		transform: translateX(-200px);
 	}
+	li.contactid{
+		position: relative !important;
+		width: 100% !important;
+		height: 50px !important;
+		display: flex !important;
+		justify-content: space-around !important;
+		align-items: center !important;
+		flex-direction: row !important;
+	}
+	li.contactid::before{
+		display: none;
+	}
 }
 @media screen and (max-width: 470px){
 	nav{
@@ -200,4 +214,26 @@ nav.active ul:nth-child(2) div.marker{
 	body > nav > div.handburger{
 		right: 20px;
 	}
+}
+/*========================================================================================*/
+footer{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background: #000;
+	color: #fff !important;
+	font-size: 16px;
+}
+footer > p{
+	margin-right: 10px;
+}
+footer > a{
+	position: relative;
+	margin: 0 5px;
+	display: block;
+	color: #fff;
 }
